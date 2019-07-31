@@ -11,8 +11,8 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: myapp-bff
-    repoURL: https://github.com/Hemankita/template-argocd-test
+    path: myapp_bff
+    repoURL: https://github.com/Hemankita/template-argocd-test.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
   syncPolicy:
     automated:
