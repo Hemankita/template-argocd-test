@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-bff
-  namespace: tools
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test
+    namespace: default
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
